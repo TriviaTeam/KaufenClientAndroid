@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "436590379088",
+    "firebase_url": "https://kaufen-3b606.firebaseio.com",
+    "project_id": "kaufen-3b606",
+    "storage_bucket": "kaufen-3b606.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436590379088:android:55743e61461f3c0c",
+        "android_client_info": {
+          "package_name": "com.delivery.kaufen.kaufen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "436590379088-di2e0q826o2mn5svnu1sgmv4igdi144t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.delivery.kaufen.kaufen",
+            "certificate_hash": "0f6ffd83208ae00e7b00e0ef4dda960ad5d1561e"
+          }
+        },
+        {
+          "client_id": "436590379088-79pkn8u2ch1uobe3pnd8pj8ttipji7tc.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "436590379088-79pkn8u2ch1uobe3pnd8pj8ttipji7tc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC677vmP4Epph-dcBHkiGxn3z1OcBls92M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "436590379088-79pkn8u2ch1uobe3pnd8pj8ttipji7tc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
