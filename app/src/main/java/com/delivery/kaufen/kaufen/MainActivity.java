@@ -5,20 +5,34 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends Activity {
 
-    public static int SPLASH_TIME_OUT = 3000;
+    public static int SPLASH_TIME_OUT = 2000;
+    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        auth = FirebaseAuth.getInstance();
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent home_intent = new Intent(MainActivity.this, HomeActivity.class);
-                startActivity(home_intent);
+
+                Intent go_intent;
+
+                if (auth.getCurrentUser() == null){
+                    go_intent = new Intent(MainActivity.this, SignInActivity.class);
+                }
+                else {
+                    go_intent = new Intent(MainActivity.this, HomeActivity.class);
+                }
+
+                startActivity(go_intent);
                 finish();
             }
         }, SPLASH_TIME_OUT);
