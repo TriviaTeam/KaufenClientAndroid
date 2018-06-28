@@ -10,14 +10,14 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends Activity {
 
     public static int SPLASH_TIME_OUT = 2000;
-    private FirebaseAuth auth;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        auth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
 
                 Intent go_intent;
 
-                if (auth.getCurrentUser() == null){
+                if (mAuth.getCurrentUser() == null){
                     go_intent = new Intent(MainActivity.this, SignInActivity.class);
                 }
                 else {
