@@ -2,14 +2,27 @@ package com.delivery.kaufen.kaufen;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SignInActivity extends AppCompatActivity {
 
     private TextView register_now;
+    private TextView email_sign_in;
+    private TextView password_sign_in;
+    private Button button_sign_in;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +30,10 @@ public class SignInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_in);
 
         register_now = findViewById(R.id.register_now);
+        button_sign_in = findViewById(R.id.button_sign);
+        password_sign_in = findViewById(R.id.password_sign);
+        email_sign_in = findViewById(R.id.email_sign);
+        mAuth = FirebaseAuth.getInstance();
 
         register_now.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,5 +43,61 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
 
+        button_sign_in.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = email_sign_in.getText().toString();
+                String password = password_sign_in.getText().toString();
+
+                if (email.length() == 0 || password.length() == 0){
+                    Toast.makeText(getApplicationContext(),"Por favor, preencha os campos " +
+                            "corretamente", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(
+                            SignInActivity.this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (!task.isSuccessful()){
+                                Toast.makeText(
+                                        getApplicationContext(),
+                                        "ERROR. Could not login",
+                                        Toast.LENGTH_LONG
+                                ).show();
+                            }
+                            else{
+                                checkIfEmailVerified();
+                            }
+                        }
+                    });
+                }
+            }
+        });
+
+    }
+
+    private void checkIfEmailVerified() {
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user.isEmailVerified()) {
+            // user is verified, so you can finish this activity or send user to activity which you want.
+            finish();
+            Toast.makeText(
+                    SignInActivity.this,
+                    "Logado com sucesso",
+                    Toast.LENGTH_SHORT
+            ).show();
+            Intent go_intent = new Intent(SignInActivity.this, HomeActivity.class);
+            startActivity(go_intent);
+        }
+        else {
+            Toast.makeText(
+                    SignInActivity.this,
+                    "Por Favor, verifique seu email antes de logar",
+                    Toast.LENGTH_SHORT
+            ).show();
+            mAuth.signOut();
+            //restart this activity
+
+        }
     }
 }

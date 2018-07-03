@@ -5,19 +5,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private ImageView button_want_buy;
-    private ImageView button_want_deliver;
+    private TextView button_want_buy;
+    private TextView button_want_deliver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        button_want_buy = findViewById(R.id.quero_comprar);
-        button_want_deliver = findViewById(R.id.quero_entregar);
+        button_want_buy = findViewById(R.id.button_want_buy);
+        button_want_deliver = findViewById(R.id.button_want_deliver);
 
         button_want_buy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +27,5 @@ public class RegisterActivity extends AppCompatActivity {
                 startActivity(go_intent);
             }
         });
-
     }
 }

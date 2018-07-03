@@ -59,29 +59,7 @@ public class RegisterClientBuy extends AppCompatActivity {
                                         Log.d("TAG", "createUserWithEmail:onComplete: DEU ERRADO");
                                     }
                                     else {
-                                        Log.d("TAG", "createUserWithEmail:onComplete: DEU CERTO");
-                                        FirebaseUser user = auth.getCurrentUser();
-
-                                        if (user != null){
-                                            user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<Void> task) {
-                                                    if (task.isSuccessful()){
-                                                        auth.signOut();
-                                                        Toast toast = Toast.makeText(getApplicationContext(),"Email de verificaçao enviado \n " +
-                                                                "para o email cadastrado", Toast.LENGTH_LONG);
-                                                        toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 0);
-                                                        toast.show();
-                                                        startActivity(new Intent(RegisterClientBuy.this, SignInActivity.class));
-                                                        finish();
-                                                    }
-                                                }
-                                            });
-                                        }
-                                        else {
-                                            Log.d("TAG", "createUserWithEmail:onComplete: DEU ERRADO AQUI");
-                                        }
-
+                                        sendEmailVerification();
                                     }
 
                                 }
@@ -89,5 +67,33 @@ public class RegisterClientBuy extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void sendEmailVerification() {
+        Log.d("TAG", "createUserWithEmail:onComplete: DEU CERTO");
+        FirebaseUser user = auth.getCurrentUser();
+
+        if (user != null){
+            user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if (task.isSuccessful()){
+                        auth.signOut();
+                        Toast toast = Toast.makeText(getApplicationContext(),
+                                "Email de verificaçao enviado \n " +
+                                "para o email cadastrado",
+                                Toast.LENGTH_LONG
+                        );
+                        toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 0);
+                        toast.show();
+                        startActivity(new Intent(RegisterClientBuy.this, SignInActivity.class));
+                        finish();
+                    }
+                }
+            });
+        }
+        else {
+            Log.d("TAG", "createUserWithEmail:onComplete: DEU ERRADO AQUI");
+        }
     }
 }
