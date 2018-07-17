@@ -61,7 +61,7 @@ public class SignInActivity extends AppCompatActivity {
                             if (!task.isSuccessful()){
                                 Toast.makeText(
                                         getApplicationContext(),
-                                        "ERROR. Could not login",
+                                        "Login ou senha invalidos.",
                                         Toast.LENGTH_LONG
                                 ).show();
                             }
@@ -79,7 +79,7 @@ public class SignInActivity extends AppCompatActivity {
     private void checkIfEmailVerified() {
         FirebaseUser user = mAuth.getCurrentUser();
         if (user.isEmailVerified()) {
-            // user is verified, so you can finish this activity or send user to activity which you want.
+            // user email is verified.
             finish();
             Toast.makeText(
                     SignInActivity.this,

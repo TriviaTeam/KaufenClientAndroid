@@ -18,7 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class RegisterClientBuy extends AppCompatActivity {
+public class RegisterClientDeliver extends AppCompatActivity {
 
     private TextView email_register_client;
     private TextView password_register_client;
@@ -29,11 +29,11 @@ public class RegisterClientBuy extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_client_buy);
+        setContentView(R.layout.activity_register_client_deliver);
 
-        email_register_client = findViewById(R.id.email_register_client);
-        password_register_client = findViewById(R.id.password_register_client);
-        button_register_client = findViewById(R.id.button_register_client);
+        email_register_client = findViewById(R.id.email_register_deliver);
+        password_register_client = findViewById(R.id.password_register_deliver);
+        button_register_client = findViewById(R.id.button_register_deliver);
         warning_info = findViewById(R.id.warning_info);
         auth = FirebaseAuth.getInstance();
 
@@ -50,7 +50,7 @@ public class RegisterClientBuy extends AppCompatActivity {
                 }
                 else{
                     auth.createUserWithEmailAndPassword(email,password)
-                            .addOnCompleteListener(RegisterClientBuy.this, new OnCompleteListener<AuthResult>() {
+                            .addOnCompleteListener(RegisterClientDeliver.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     Log.d("TAG", "createUserWithEmail:onComplete:" + task.isSuccessful());
@@ -83,12 +83,12 @@ public class RegisterClientBuy extends AppCompatActivity {
                         auth.signOut();
                         Toast toast = Toast.makeText(getApplicationContext(),
                                 "Email de verificaçao enviado \n " +
-                                "para o email cadastrado",
+                                        "para o email cadastrado",
                                 Toast.LENGTH_LONG
                         );
                         toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 0);
                         toast.show();
-                        startActivity(new Intent(RegisterClientBuy.this, SignInActivity.class));
+                        startActivity(new Intent(RegisterClientDeliver.this, SignInActivity.class));
                         finish();
                     }
                 }

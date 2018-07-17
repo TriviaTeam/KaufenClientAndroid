@@ -4,28 +4,36 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Button;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private TextView button_want_buy;
-    private TextView button_want_deliver;
+    private Button comprar;
+    private Button entregar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        button_want_buy = findViewById(R.id.button_want_buy);
-        button_want_deliver = findViewById(R.id.button_want_deliver);
+        comprar = findViewById(R.id.button_comprar);
+        entregar = findViewById(R.id.button_entregar);
 
-        button_want_buy.setOnClickListener(new View.OnClickListener() {
+        comprar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent go_intent = new Intent(RegisterActivity.this, RegisterClientBuy.class);
-                startActivity(go_intent);
+                Intent registrar_comrpar = new Intent(RegisterActivity.this, RegisterClientBuy.class);
+                startActivity(registrar_comrpar);
             }
         });
+
+        entregar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent registrar_entregar = new Intent(RegisterActivity.this, RegisterClientDeliver.class);
+                startActivity(registrar_entregar);
+            }
+        });
+
     }
 }
