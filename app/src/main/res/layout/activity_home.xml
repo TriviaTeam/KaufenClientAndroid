@@ -6,36 +6,195 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <include android:id="@+id/toolbar_principal"
-        layout="@layout/toolbar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="209dp">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="55dp"
-        android:layout_height="47dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/logocru"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.974"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_google_signin_btn_text_dark_focused">
 
-    <Button
-        android:id="@+id/logout_button"
-        android:layout_width="266dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <ImageView
+                android:id="@+id/section_fastfood3"
+                android:layout_width="0dp"
+                android:layout_height="276dp"
+                android:background="@drawable/restalrantes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/section_fastfood2" />
+
+            <ImageView
+                android:id="@+id/section_fastfood2"
+                android:layout_width="0dp"
+                android:layout_height="276dp"
+                android:background="@drawable/farmacia"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/section_fastfood" />
+
+            <ImageView
+                android:id="@+id/section_fastfood"
+                android:layout_width="0dp"
+                android:layout_height="276dp"
+                android:background="@drawable/fastfood"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/section_mercados" />
+
+            <ImageView
+                android:id="@+id/section_mercados"
+                android:layout_width="0dp"
+                android:layout_height="276dp"
+                android:background="@drawable/mercado"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/logout_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Sair"
+                app:layout_constraintBottom_toBottomOf="@+id/section_mercados"
+                app:layout_constraintEnd_toEndOf="@+id/section_mercados"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/section_mercados"
+                app:layout_constraintTop_toTopOf="@+id/section_mercados"
+                app:layout_constraintVertical_bias="0.037" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="159dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:text="mercados"
+                android:textColor="@android:color/background_light"
+                android:textSize="35dp"
+                app:layout_constraintBottom_toTopOf="@+id/section_fastfood"
+                app:layout_constraintEnd_toEndOf="@+id/section_mercados"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="@+id/section_mercados"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.286" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="159dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="farmácias"
+                android:textColor="@android:color/background_light"
+                android:textSize="35dp"
+                app:layout_constraintBottom_toTopOf="@+id/section_fastfood3"
+                app:layout_constraintEnd_toEndOf="@+id/section_fastfood2"
+                app:layout_constraintStart_toStartOf="@+id/section_fastfood2"
+                app:layout_constraintTop_toTopOf="@+id/section_fastfood2" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="150dp"
+                android:layout_height="43dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="fast food"
+                android:textColor="#125128"
+                android:textSize="35dp"
+                app:layout_constraintBottom_toBottomOf="@+id/section_fastfood"
+                app:layout_constraintEnd_toEndOf="@+id/section_fastfood"
+                app:layout_constraintStart_toStartOf="@+id/section_fastfood"
+                app:layout_constraintTop_toBottomOf="@+id/section_mercados" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="202dp"
+                android:layout_height="43dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="restaurantes"
+                android:textColor="#125121"
+                android:textSize="35dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/section_fastfood3"
+                app:layout_constraintStart_toStartOf="@+id/section_fastfood3"
+                app:layout_constraintTop_toTopOf="@+id/section_fastfood3" />
+
+            <ImageView
+                android:id="@+id/market_icon_2"
+                android:layout_width="76dp"
+                android:layout_height="75dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintBottom_toTopOf="@+id/section_fastfood"
+                app:layout_constraintEnd_toEndOf="@+id/section_mercados"
+                app:layout_constraintStart_toStartOf="@+id/section_mercados"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                app:layout_constraintVertical_bias="0.073"
+                app:srcCompat="@drawable/extra_icon" />
+
+            <ImageView
+                android:id="@+id/market_icon_3"
+                android:layout_width="76dp"
+                android:layout_height="75dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/section_mercados"
+                app:layout_constraintEnd_toEndOf="@+id/section_mercados"
+                app:layout_constraintHorizontal_bias="0.548"
+                app:layout_constraintStart_toEndOf="@+id/market_icon_2"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                app:layout_constraintVertical_bias="0.415"
+                app:srcCompat="@drawable/paodeacucar_icon" />
+
+            <ImageView
+                android:id="@+id/makert_icon_1"
+                android:layout_width="76dp"
+                android:layout_height="75dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/section_mercados"
+                app:layout_constraintEnd_toStartOf="@+id/market_icon_2"
+                app:layout_constraintHorizontal_bias="0.467"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                app:layout_constraintVertical_bias="0.415"
+                app:srcCompat="@drawable/carrefour_icon" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_cartoes"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="@string/action_cartoes"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_config"
+        android:orderInCategory="100"
+        android:title="@string/action_config"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_termos"
+        android:orderInCategory="100"
+        android:title="@string/action_termos"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_faq"
+        android:orderInCategory="100"
+        android:title="@string/action_perguntas_frequentes"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_sair"
+        android:orderInCategory="100"
+        android:title="@string/action_sair"
         app:showAsAction="never" />
 </menu>
