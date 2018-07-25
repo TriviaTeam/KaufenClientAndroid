@@ -13,26 +13,12 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private Button logout;
     private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        auth = FirebaseAuth.getInstance();
-        logout = findViewById(R.id.logout_button);
-
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                auth.signOut();
-                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
 
     }
 
@@ -45,7 +31,20 @@ public class HomeActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
-
+        int id = item.getItemId();
+        switch (id){
+            case R.id.action_sair:
+                this.logout();
+        }
         return true;
+    }
+
+    private void logout(){
+        auth = FirebaseAuth.getInstance();
+        auth.signOut();
+        Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+
     }
 }
