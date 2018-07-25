@@ -199,14 +199,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
-                    android:background="@android:color/holo_blue_bright" />
+                    android:background="@drawable/livros" />
 
                 <View
                     android:id="@+id/section_livrarias"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
-                    android:background="@color/colorAccent" />
+                    android:background="@drawable/padarias" />
             </TableRow>
 
             <ImageView
