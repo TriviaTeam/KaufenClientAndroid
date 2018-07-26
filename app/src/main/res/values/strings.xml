@@ -33,4 +33,16 @@
     <string name="background_mercados_home">background_mercados_home</string>
     <string name="action_termos">Termos de uso</string>
     <string name="action_perguntas_frequentes">Perguntas Frequentes</string>
+    <string name="title_mercados">mercados</string>
+    <string name="title_farmacias">farmácias</string>
+    <string name="title_fast_food">fast food</string>
+    <string name="title_restaurantes">restaurantes</string>
+    <string name="title_padarias">padarias</string>
+    <string name="title_livrarias">livrarias</string>
+    <string name="title_pesquisar_sessao">pesquisar sessão</string>
+    <string name="section_for_fast_foods">section for fast foods</string>
+    <string name="todo">TODO</string>
+    <string name="chat_button">chat_button</string>
+    <string name="section_for_restaurants">section for restaurants</string>
+    <string name="action_transac">Minhas compras</string>
 </resources>

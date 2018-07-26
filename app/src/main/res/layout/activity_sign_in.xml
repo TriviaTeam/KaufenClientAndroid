@@ -77,11 +77,22 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="194dp"
-            android:layout_height="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:text="@string/esqueci_minha_senha"
+            android:textColor="@color/colorPrimary"
+            tools:layout_marginLeft="20dp"
+            tools:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/text_reenviar_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:text="reenviar email de verificação"
             android:textColor="@color/colorPrimary"
             tools:layout_marginLeft="20dp"
             tools:layout_marginTop="20dp" />
@@ -90,8 +101,8 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="158dp"
-        android:layout_height="20dp"
+        android:layout_width="164dp"
+        android:layout_height="19dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"

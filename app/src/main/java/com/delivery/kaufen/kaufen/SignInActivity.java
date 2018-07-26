@@ -21,6 +21,7 @@ public class SignInActivity extends AppCompatActivity {
     private TextView register_now;
     private TextView email_sign_in;
     private TextView password_sign_in;
+    private TextView resend_email_verif;
     private Button button_sign_in;
     private FirebaseAuth mAuth;
 
@@ -33,12 +34,21 @@ public class SignInActivity extends AppCompatActivity {
         button_sign_in = findViewById(R.id.button_sign);
         password_sign_in = findViewById(R.id.password_sign);
         email_sign_in = findViewById(R.id.email_sign);
+        resend_email_verif = findViewById(R.id.text_reenviar_email);
         mAuth = FirebaseAuth.getInstance();
 
         register_now.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent go_register = new Intent(SignInActivity.this, RegisterActivity.class);
+                startActivity(go_register);
+            }
+        });
+
+        resend_email_verif.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent go_register = new Intent(SignInActivity.this, ResendEmailActivity.class);
                 startActivity(go_register);
             }
         });

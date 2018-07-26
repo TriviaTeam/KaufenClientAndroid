@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorAccent"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="0dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -32,6 +32,7 @@
                 android:layout_width="0dp"
                 android:layout_height="276dp"
                 android:background="@drawable/restalrantes"
+                android:contentDescription="@string/section_for_restaurants"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/section_farmacias" />
 
@@ -41,13 +42,15 @@
                 android:layout_height="276dp"
                 android:background="@drawable/farmacia"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/section_fastfood" />
+                app:layout_constraintTop_toBottomOf="@+id/section_fastfood"
+                android:contentDescription="@string/todo" />
 
             <ImageView
                 android:id="@+id/section_fastfood"
                 android:layout_width="0dp"
                 android:layout_height="276dp"
                 android:background="@drawable/fastfood"
+                android:contentDescription="@string/section_for_fast_foods"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/section_mercados" />
 
@@ -58,7 +61,8 @@
                 android:layout_marginTop="184dp"
                 android:background="@drawable/mercado"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="TODO" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -71,7 +75,7 @@
                 android:layout_marginStart="8dp"
                 android:text="mercados"
                 android:textColor="@android:color/background_light"
-                android:textSize="35dp"
+                android:textSize="35sp"
                 app:layout_constraintBottom_toTopOf="@+id/section_fastfood"
                 app:layout_constraintEnd_toEndOf="@+id/section_mercados"
                 app:layout_constraintHorizontal_bias="0.502"
@@ -89,9 +93,9 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="farmácias"
+                android:text="farmacias"
                 android:textColor="@android:color/background_light"
-                android:textSize="35dp"
+                android:textSize="35sp"
                 app:layout_constraintBottom_toTopOf="@+id/section_restaurante"
                 app:layout_constraintEnd_toEndOf="@+id/section_farmacias"
                 app:layout_constraintStart_toStartOf="@+id/section_farmacias"
@@ -109,7 +113,7 @@
                 android:layout_marginTop="8dp"
                 android:text="fast food"
                 android:textColor="#125128"
-                android:textSize="35dp"
+                android:textSize="35sp"
                 app:layout_constraintBottom_toBottomOf="@+id/section_fastfood"
                 app:layout_constraintEnd_toEndOf="@+id/section_fastfood"
                 app:layout_constraintStart_toStartOf="@+id/section_fastfood"
@@ -119,7 +123,7 @@
                 android:id="@+id/textView8"
                 android:layout_width="202dp"
                 android:layout_height="43dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="1dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
@@ -127,7 +131,7 @@
                 android:layout_marginTop="8dp"
                 android:text="restaurantes"
                 android:textColor="#125121"
-                android:textSize="35dp"
+                android:textSize="35sp"
                 app:layout_constraintBottom_toBottomOf="@+id/section_restaurante"
                 app:layout_constraintEnd_toEndOf="@+id/section_restaurante"
                 app:layout_constraintStart_toStartOf="@+id/section_restaurante"
@@ -148,7 +152,8 @@
                 app:layout_constraintStart_toStartOf="@+id/section_mercados"
                 app:layout_constraintTop_toBottomOf="@+id/textView4"
                 app:layout_constraintVertical_bias="0.073"
-                app:srcCompat="@drawable/extra_icon" />
+                app:srcCompat="@drawable/extra_icon"
+                android:contentDescription="@string/todo" />
 
             <ImageView
                 android:id="@+id/market_icon_3"
@@ -166,7 +171,8 @@
                 app:layout_constraintStart_toEndOf="@+id/market_icon_2"
                 app:layout_constraintTop_toBottomOf="@+id/textView4"
                 app:layout_constraintVertical_bias="0.435"
-                app:srcCompat="@drawable/paodeacucar_icon" />
+                app:srcCompat="@drawable/paodeacucar_icon"
+                android:contentDescription="TODO" />
 
             <ImageView
                 android:id="@+id/makert_icon_1"
@@ -184,9 +190,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView4"
                 app:layout_constraintVertical_bias="0.435"
-                app:srcCompat="@drawable/carrefour_icon" />
+                app:srcCompat="@drawable/carrefour_icon"
+                android:contentDescription="TODO" />
 
             <TableRow
+                android:id="@+id/tableRow"
                 android:layout_width="match_parent"
                 android:layout_height="153dp"
                 android:background="@color/common_google_signin_btn_text_dark_default"
@@ -207,6 +215,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:background="@drawable/padarias" />
+
             </TableRow>
 
             <ImageView
@@ -224,11 +233,52 @@
                 app:layout_constraintStart_toStartOf="@+id/section_search"
                 app:layout_constraintTop_toTopOf="@+id/section_search"
                 app:layout_constraintVertical_bias="0.255"
-                app:srcCompat="@drawable/logocru" />
+                app:srcCompat="@drawable/logocru"
+                android:contentDescription="@string/todo" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="83dp"
+                android:layout_height="31dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="padarias"
+                android:textColor="#125128"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tableRow"
+                app:layout_constraintHorizontal_bias="0.849"
+                app:layout_constraintStart_toStartOf="@+id/tableRow"
+                app:layout_constraintTop_toTopOf="@+id/tableRow"
+                app:layout_constraintVertical_bias="0.518" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="74dp"
+                android:layout_height="29dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="livrarias"
+                android:textColor="#FFF"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tableRow"
+                app:layout_constraintHorizontal_bias="0.163"
+                app:layout_constraintStart_toStartOf="@+id/tableRow"
+                app:layout_constraintTop_toTopOf="@+id/tableRow"
+                app:layout_constraintVertical_bias="0.518" />
 
             <EditText
                 android:id="@+id/editText"
-                android:layout_width="wrap_content"
+                android:layout_width="175dp"
                 android:layout_height="38dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
@@ -241,12 +291,12 @@
                 android:inputType="textPersonName"
                 app:layout_constraintBottom_toBottomOf="@+id/section_search"
                 app:layout_constraintEnd_toEndOf="@+id/section_search"
-                app:layout_constraintHorizontal_bias="0.64"
+                app:layout_constraintHorizontal_bias="0.383"
                 app:layout_constraintStart_toStartOf="@+id/section_search"
                 app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/button_search_section"
                 android:layout_width="40dp"
                 android:layout_height="34dp"
                 android:layout_marginBottom="24dp"
@@ -254,17 +304,21 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="13dp"
+                android:contentDescription="TODO"
                 app:layout_constraintBottom_toBottomOf="@+id/section_search"
-                app:layout_constraintEnd_toStartOf="@+id/editText"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/section_search"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/editText"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@drawable/searchicon" />
 
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/butto_chat"
         android:layout_width="68dp"
         android:layout_height="58dp"
         android:layout_marginBottom="8dp"
@@ -273,6 +327,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="@string/chat_button"
         app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="@+id/scrollView2"
         app:layout_constraintHorizontal_bias="1.0"

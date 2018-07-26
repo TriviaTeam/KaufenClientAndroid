@@ -57,6 +57,12 @@ public class RegisterClientBuy extends AppCompatActivity {
 
                                     if (!task.isSuccessful()){
                                         Log.d("TAG", "createUserWithEmail:onComplete: DEU ERRADO");
+                                        Toast toast = Toast.makeText(getApplicationContext(),
+                                                "Algo deu errado no registro",
+                                                Toast.LENGTH_LONG
+                                        );
+                                        toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 0);
+                                        toast.show();
                                     }
                                     else {
                                         FirebaseUser user = auth.getCurrentUser();
