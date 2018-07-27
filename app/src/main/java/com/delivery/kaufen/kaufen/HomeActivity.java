@@ -35,6 +35,9 @@ public class HomeActivity extends AppCompatActivity {
         switch (id){
             case R.id.action_sair:
                 this.logout();
+            case R.id.action_config:
+                Intent intent = new Intent(HomeActivity.this, AccountConfBuyerActivity.class);
+                startActivity(intent);
         }
         return true;
     }
