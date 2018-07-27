@@ -334,6 +334,6 @@
         app:layout_constraintStart_toStartOf="@+id/scrollView2"
         app:layout_constraintTop_toTopOf="@+id/scrollView2"
         app:layout_constraintVertical_bias="0.981"
-        app:srcCompat="@drawable/chat" />
+        app:srcCompat="@drawable/icon_chat" />
 
 </android.support.constraint.ConstraintLayout>
