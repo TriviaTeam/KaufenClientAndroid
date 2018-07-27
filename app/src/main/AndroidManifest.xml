@@ -29,7 +29,8 @@
         <activity android:name=".RegisterClientBuy" />
         <activity android:name=".RegisterClientDeliver" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".ResendEmailActivity"></activity>
+        <activity android:name=".ResendEmailActivity" />
+        <activity android:name=".AccountConfBuyerActivity"></activity>
     </application>
 
 </manifest>
