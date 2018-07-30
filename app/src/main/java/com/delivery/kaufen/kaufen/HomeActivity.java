@@ -35,11 +35,14 @@ public class HomeActivity extends AppCompatActivity {
         switch (id){
             case R.id.action_sair:
                 this.logout();
+                return true;
             case R.id.action_config:
                 Intent intent = new Intent(HomeActivity.this, AccountConfBuyerActivity.class);
                 startActivity(intent);
+                return true;
         }
-        return true;
+
+        return false;
     }
 
     private void logout(){
