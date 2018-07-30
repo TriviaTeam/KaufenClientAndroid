@@ -326,21 +326,24 @@
                 app:srcCompat="@color/colorPrimaryDark" />
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/bkicon"
                 android:layout_width="76dp"
                 android:layout_height="76dp"
                 android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginLeft="52dp"
+                android:layout_marginRight="8dp"
                 android:layout_marginStart="52dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="@+id/section_fastfood"
+                app:layout_constraintEnd_toStartOf="@+id/giraffasicon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView6"
                 app:layout_constraintVertical_bias="0.416"
                 app:srcCompat="@drawable/bkicon" />
 
             <ImageView
-                android:id="@+id/imageView9"
+                android:id="@+id/giraffasicon"
                 android:layout_width="76dp"
                 android:layout_height="76dp"
                 android:layout_marginBottom="8dp"
@@ -350,15 +353,14 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="@+id/section_fastfood"
-                app:layout_constraintEnd_toStartOf="@+id/imageView10"
-                app:layout_constraintHorizontal_bias="0.562"
-                app:layout_constraintStart_toEndOf="@+id/imageView8"
+                app:layout_constraintEnd_toEndOf="@+id/section_fastfood"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView6"
                 app:layout_constraintVertical_bias="0.416"
                 app:srcCompat="@drawable/giraffasicon" />
 
             <ImageView
-                android:id="@+id/imageView10"
+                android:id="@+id/mcdonaldsicon"
                 android:layout_width="76dp"
                 android:layout_height="76dp"
                 android:layout_marginBottom="8dp"
@@ -372,21 +374,24 @@
                 app:srcCompat="@drawable/mcdonaldsicon" />
 
             <ImageView
-                android:id="@+id/imageView11"
+                android:id="@+id/farm_rosarioicon"
                 android:layout_width="76dp"
                 android:layout_height="76dp"
                 android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginLeft="52dp"
+                android:layout_marginRight="8dp"
                 android:layout_marginStart="52dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="@+id/section_farmacias"
+                app:layout_constraintEnd_toStartOf="@+id/farmac_drogasilicon"
                 app:layout_constraintStart_toStartOf="@+id/section_farmacias"
                 app:layout_constraintTop_toBottomOf="@+id/textView7"
                 app:layout_constraintVertical_bias="0.565"
                 app:srcCompat="@drawable/drogariarosario_icon" />
 
             <ImageView
-                android:id="@+id/imageView12"
+                android:id="@+id/farmac_drogasilicon"
                 android:layout_width="76dp"
                 android:layout_height="76dp"
                 android:layout_marginBottom="8dp"
@@ -396,23 +401,25 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="@+id/section_farmacias"
-                app:layout_constraintEnd_toStartOf="@+id/imageView13"
-                app:layout_constraintHorizontal_bias="0.562"
-                app:layout_constraintStart_toEndOf="@+id/imageView11"
+                app:layout_constraintEnd_toEndOf="@+id/section_farmacias"
+                app:layout_constraintStart_toStartOf="@+id/section_farmacias"
                 app:layout_constraintTop_toBottomOf="@+id/textView7"
                 app:layout_constraintVertical_bias="0.584"
                 app:srcCompat="@drawable/drogasil_icon" />
 
             <ImageView
-                android:id="@+id/imageView13"
+                android:id="@+id/farmac_santamartaicon"
                 android:layout_width="76dp"
                 android:layout_height="76dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="56dp"
+                android:layout_marginLeft="8dp"
                 android:layout_marginRight="56dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="@+id/section_farmacias"
                 app:layout_constraintEnd_toEndOf="@+id/section_farmacias"
+                app:layout_constraintStart_toEndOf="@+id/farmac_drogasilicon"
                 app:layout_constraintTop_toBottomOf="@+id/textView7"
                 app:layout_constraintVertical_bias="0.565"
                 app:srcCompat="@drawable/santamarta_icon" />
@@ -421,7 +428,7 @@
     </ScrollView>
 
     <ImageView
-        android:id="@+id/butto_chat"
+        android:id="@+id/button_chat"
         android:layout_width="68dp"
         android:layout_height="58dp"
         android:layout_marginBottom="8dp"
