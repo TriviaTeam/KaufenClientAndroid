@@ -46,4 +46,5 @@
     <string name="section_for_restaurants">section for restaurants</string>
     <string name="action_transac">Minhas compras</string>
     <string name="action_fale_conosco">Fale conosco</string>
+    <string name="action_shoplist">Lista de Compras</string>
 </resources>
