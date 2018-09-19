@@ -290,6 +290,8 @@
                 android:ems="10"
                 android:hint="pesquisar sessão"
                 android:inputType="textPersonName"
+                android:textColorLink="@color/primary_material_light_1"
+                android:textCursorDrawable="@color/primary_material_light_1"
                 app:layout_constraintBottom_toBottomOf="@+id/section_search"
                 app:layout_constraintEnd_toEndOf="@+id/section_search"
                 app:layout_constraintHorizontal_bias="0.383"
