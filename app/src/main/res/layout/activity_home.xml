@@ -41,9 +41,9 @@
                 android:layout_width="0dp"
                 android:layout_height="276dp"
                 android:background="@drawable/farmacia"
+                android:contentDescription="@string/todo"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/section_fastfood"
-                android:contentDescription="@string/todo" />
+                app:layout_constraintTop_toBottomOf="@+id/section_fastfood" />
 
             <ImageView
                 android:id="@+id/section_fastfood"
@@ -60,9 +60,9 @@
                 android:layout_height="276dp"
                 android:layout_marginTop="184dp"
                 android:background="@drawable/mercado"
+                android:contentDescription="TODO"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="TODO" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -150,13 +150,13 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="32dp"
+                android:contentDescription="@string/todo"
                 app:layout_constraintBottom_toTopOf="@+id/section_fastfood"
                 app:layout_constraintEnd_toEndOf="@+id/section_mercados"
                 app:layout_constraintStart_toStartOf="@+id/section_mercados"
                 app:layout_constraintTop_toBottomOf="@+id/textView4"
                 app:layout_constraintVertical_bias="0.073"
-                app:srcCompat="@drawable/extra_icon"
-                android:contentDescription="@string/todo" />
+                app:srcCompat="@drawable/extra_icon" />
 
             <ImageView
                 android:id="@+id/market_icon_3"
@@ -168,14 +168,14 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:contentDescription="TODO"
                 app:layout_constraintBottom_toBottomOf="@+id/section_mercados"
                 app:layout_constraintEnd_toEndOf="@+id/section_mercados"
                 app:layout_constraintHorizontal_bias="0.306"
                 app:layout_constraintStart_toEndOf="@+id/market_icon_2"
                 app:layout_constraintTop_toBottomOf="@+id/textView4"
                 app:layout_constraintVertical_bias="0.435"
-                app:srcCompat="@drawable/paodeacucar_icon"
-                android:contentDescription="TODO" />
+                app:srcCompat="@drawable/paodeacucar_icon" />
 
             <ImageView
                 android:id="@+id/makert_icon_1"
@@ -187,14 +187,14 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:contentDescription="TODO"
                 app:layout_constraintBottom_toBottomOf="@+id/section_mercados"
                 app:layout_constraintEnd_toStartOf="@+id/market_icon_2"
                 app:layout_constraintHorizontal_bias="0.741"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView4"
                 app:layout_constraintVertical_bias="0.435"
-                app:srcCompat="@drawable/carrefour_icon"
-                android:contentDescription="TODO" />
+                app:srcCompat="@drawable/carrefour_icon" />
 
             <TableRow
                 android:id="@+id/tableRow"
@@ -231,13 +231,13 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:contentDescription="@string/todo"
                 app:layout_constraintBottom_toBottomOf="@+id/section_search"
                 app:layout_constraintEnd_toEndOf="@+id/section_search"
                 app:layout_constraintStart_toStartOf="@+id/section_search"
                 app:layout_constraintTop_toTopOf="@+id/section_search"
                 app:layout_constraintVertical_bias="0.255"
-                app:srcCompat="@drawable/logocru"
-                android:contentDescription="@string/todo" />
+                app:srcCompat="@drawable/logocru" />
 
             <TextView
                 android:id="@+id/textView13"

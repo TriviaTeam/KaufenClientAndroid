@@ -8,17 +8,34 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
 
     private FirebaseAuth auth;
+    private ImageView market_section;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        market_section = findViewById(R.id.section_mercados);
+        market_section.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent go_register = new Intent(
+                        HomeActivity.this,
+                        MarketSessionActivity.class
+                );
+
+                startActivity(go_register);
+            }
+        });
 
     }
 

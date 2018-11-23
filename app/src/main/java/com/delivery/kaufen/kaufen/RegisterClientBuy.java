@@ -66,7 +66,14 @@ public class RegisterClientBuy extends AppCompatActivity {
                                     }
                                     else {
                                         FirebaseUser user = auth.getCurrentUser();
-                                        sendEmailVerification(user);
+                                        Intent intent = new Intent(
+                                                RegisterClientBuy.this,
+                                                RegisterClientPersonal.class
+                                        );
+
+                                        intent.putExtra("user", user);
+                                        startActivity(intent);
+                                        //sendEmailVerification(user);
                                         //user.getDisplayName();
                                         //user.getUid();
                                     }
