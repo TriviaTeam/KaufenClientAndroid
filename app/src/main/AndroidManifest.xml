@@ -32,7 +32,8 @@
         <activity android:name=".ResendEmailActivity" />
         <activity android:name=".AccountConfBuyerActivity" />
         <activity android:name=".MarketSessionActivity" />
-        <activity android:name=".RegisterClientPersonal"></activity>
+        <activity android:name=".RegisterClientPersonal" />
+        <activity android:name=".HomeActualActivity"></activity>
     </application>
 
 </manifest>

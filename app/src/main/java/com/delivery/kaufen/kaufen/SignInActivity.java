@@ -96,7 +96,7 @@ public class SignInActivity extends AppCompatActivity {
                     "Logado com sucesso",
                     Toast.LENGTH_SHORT
             ).show();
-            Intent go_intent = new Intent(SignInActivity.this, HomeActivity.class);
+            Intent go_intent = new Intent(SignInActivity.this, HomeActualActivity.class);
             startActivity(go_intent);
         }
         else {
